@@ -1,0 +1,2001 @@
+{
+  "exportedAt": "2026-02-18T18:46:53.332475Z",
+  "data": {
+    "users": [
+      {
+        "id": "user_import",
+        "name": "Importado"
+      }
+    ],
+    "animals": [
+      {
+        "id": "ani_import_1",
+        "arete": "6",
+        "name": "Victoria",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "F1 Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_2",
+        "arete": "10",
+        "name": "Paturra",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Brahman PATURRA",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_3",
+        "arete": "16",
+        "name": "Reina de Cartagena",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "GYR",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_4",
+        "arete": "403",
+        "name": "403-Indira",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_5",
+        "arete": "11",
+        "name": "Hijo de Indira H de 403",
+        "finca": "Guadalupe",
+        "sexo": "Macho",
+        "raza": "Girolanda F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_6",
+        "arete": "21",
+        "name": "21",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_7",
+        "arete": "",
+        "name": "Hijo de 021 \"Tomas de Aquino\"",
+        "finca": "Guadalupe",
+        "sexo": "Macho",
+        "raza": "Girolanda F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_8",
+        "arete": "47",
+        "name": "47 \"mamá de Copito\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_9",
+        "arete": "",
+        "name": "Hijo de 047- \"Copito\"",
+        "finca": "Guadalupe",
+        "sexo": "Macho",
+        "raza": "Girolanda F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_10",
+        "arete": "",
+        "name": "H de 073 \"BLAS\"- Huerfano",
+        "finca": "Guadalupe",
+        "sexo": "Macho",
+        "raza": "Girolando F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_11",
+        "arete": "53",
+        "name": "53",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_12",
+        "arete": "",
+        "name": "Hijo de 053 \"Lluvia\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_13",
+        "arete": "",
+        "name": "45 \"Azabache\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_14",
+        "arete": "45",
+        "name": "Hijo de 045 \"Diana\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_15",
+        "arete": "38",
+        "name": "38",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_16",
+        "arete": "186",
+        "name": "186 \"Noche\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_17",
+        "arete": "",
+        "name": "Hijo de 186 \"Noche\"",
+        "finca": "Guadalupe",
+        "sexo": "Macho",
+        "raza": "Girolanda F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_18",
+        "arete": "52",
+        "name": "52 \"Nikita\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_19",
+        "arete": "",
+        "name": "Hijo de 052 \"Nikita\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_20",
+        "arete": "78",
+        "name": "78",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_21",
+        "arete": "1317",
+        "name": "1317 \"Cariñosa\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_22",
+        "arete": "",
+        "name": "Hijo de 1317 \"Cariñito\"",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F2",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_23",
+        "arete": "1152",
+        "name": "1152",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_24",
+        "arete": "818",
+        "name": "818-3",
+        "finca": "Guadalupe",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_25",
+        "arete": "4",
+        "name": "Shakira",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Parda Suizo x Cebu PATURRA",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_26",
+        "arete": "3",
+        "name": "Siete Mujeres",
+        "finca": "3C",
+        "sexo": "Macho",
+        "raza": "Cebu Paturro",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_27",
+        "arete": "22",
+        "name": "Carol",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "No especifico",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_28",
+        "arete": "14",
+        "name": "Paturra Hija",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Brahman Rojo PATURRA",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_29",
+        "arete": "1",
+        "name": "Ramsés",
+        "finca": "3C",
+        "sexo": "Macho",
+        "raza": "Red Shindi",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_30",
+        "arete": "320",
+        "name": "320-N23",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_31",
+        "arete": "348",
+        "name": "348-124",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_32",
+        "arete": "330",
+        "name": "330-D23",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_33",
+        "arete": "327",
+        "name": "327-D23",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_34",
+        "arete": "347",
+        "name": "347-124",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_35",
+        "arete": "328",
+        "name": "328-D23",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_36",
+        "arete": "350",
+        "name": "350-124",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_37",
+        "arete": "345",
+        "name": "345-124",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_38",
+        "arete": "18",
+        "name": "Dina Luz - 018",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Red Shindi",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_39",
+        "arete": "1751",
+        "name": "1751",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_40",
+        "arete": "42",
+        "name": "Hijo de 1751",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_41",
+        "arete": "1557",
+        "name": "1757-0",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_42",
+        "arete": "29",
+        "name": "Hijo de 1757-0",
+        "finca": "3C",
+        "sexo": "Macho",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_43",
+        "arete": "1731",
+        "name": "1731-0",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_44",
+        "arete": "31",
+        "name": "Hijo de 1731-0",
+        "finca": "3C",
+        "sexo": "Macho",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_45",
+        "arete": "1697",
+        "name": "1697-0",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_46",
+        "arete": "33",
+        "name": "Hijo de 1697-0",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_47",
+        "arete": "1799",
+        "name": "1799-0",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_48",
+        "arete": "35",
+        "name": "Hijo de 1799-0",
+        "finca": "3C",
+        "sexo": "Macho",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_49",
+        "arete": "504",
+        "name": "504-220",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_50",
+        "arete": "44",
+        "name": "Hijo de 504-220",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_51",
+        "arete": "1479",
+        "name": "1479-0",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_52",
+        "arete": "46",
+        "name": "Hijo de 1479-0",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_53",
+        "arete": "116-9",
+        "name": "116-9",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_54",
+        "arete": "1726",
+        "name": "1726",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_55",
+        "arete": "1810",
+        "name": "1810-0",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Simbrah",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_56",
+        "arete": "127",
+        "name": "127",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_57",
+        "arete": "49",
+        "name": "49",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_58",
+        "arete": "57",
+        "name": "57",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda F1",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_59",
+        "arete": "294",
+        "name": "294-123",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "ani_import_60",
+        "arete": "310",
+        "name": "310-923",
+        "finca": "3C",
+        "sexo": "Hembra",
+        "raza": "Girolanda Plus",
+        "createdBy": "user_import",
+        "createdAt": 0
+      }
+    ],
+    "milk": [],
+    "healthEvents": [
+      {
+        "id": "hev_import_1",
+        "animalId": "ani_import_49",
+        "procedure": "Ricomax 15cc subcutáneo-Vacuna Reproductiv. Eco: útero sin tono folículo grande ovario derecho útero en anestro.",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_2",
+        "animalId": "ani_import_49",
+        "procedure": "Ricomax 5ml-Vacuna carbon 1era dosis",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_3",
+        "animalId": "ani_import_51",
+        "procedure": "Ricomax 15cc subcutáneo-Vacuna Reproductiv. Edoantripan 20cc c/l. Eco: útero sin tono folículo grande ovario derecho útero en anestro.",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_4",
+        "animalId": "ani_import_39",
+        "procedure": "Ricomax 5ml-Vacuna carbon 1era dosis",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_5",
+        "animalId": "ani_import_43",
+        "procedure": "Ricomax 15cc subcutáneo-Vacuna Reproductiv. Imidocar- Eco: útero sin tono útero en anestro. Abcseso en gluteo, impresiona babesia, No ordeñar.",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_6",
+        "animalId": "ani_import_43",
+        "procedure": "Ricomax 5ml-Vacuna carbon 1era dosis",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_7",
+        "animalId": "ani_import_47",
+        "procedure": "Ricomax 15cc subcutáneo-Vacuna Reproductiv. Imidocar- Eco: útero sin tono útero en anestro. Abcseso en gluteo, se drenó, impresiona babesia, No ordeñar.",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_8",
+        "animalId": "ani_import_47",
+        "procedure": "Ricomax 5ml-Vacuna carbon 1era dosis, curagan en cuerno.",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_9",
+        "animalId": "ani_import_30",
+        "procedure": "Ricomax 15ml",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_10",
+        "animalId": "ani_import_31",
+        "procedure": "Ricomax 15ml",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_11",
+        "animalId": "ani_import_32",
+        "procedure": "Ricomax 15ml",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_12",
+        "animalId": "ani_import_33",
+        "procedure": "Ricomax 15ml",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_13",
+        "animalId": "ani_import_34",
+        "procedure": "Ricomax 15ml",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_14",
+        "animalId": "ani_import_35",
+        "procedure": "Ricomax 15ml",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_15",
+        "animalId": "ani_import_36",
+        "procedure": "Ricomax 15ml",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_16",
+        "animalId": "ani_import_37",
+        "procedure": "Ricomax 15ml",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_17",
+        "animalId": "ani_import_45",
+        "procedure": "Baño con Amitrax, Ricomax 15 cc SC, AZ5 15CC SC",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_18",
+        "animalId": "ani_import_46",
+        "procedure": "Baño con Amitrax, Ricomax 5 cc SC, AZ5 15CC SC",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_19",
+        "animalId": "ani_import_49",
+        "procedure": "Baño con Amitrax, AZ5 15CC SC",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_20",
+        "animalId": "ani_import_49",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_21",
+        "animalId": "ani_import_51",
+        "procedure": "Baño con Amitrax, AZ5 15CC SC",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_22",
+        "animalId": "ani_import_39",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_23",
+        "animalId": "ani_import_43",
+        "procedure": "Baño con Amitrax, AZ5 15CC SC",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_24",
+        "animalId": "ani_import_43",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_25",
+        "animalId": "ani_import_47",
+        "procedure": "Baño con Amitrax, AZ5 15CC SC",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_26",
+        "animalId": "ani_import_47",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_27",
+        "animalId": "ani_import_30",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_28",
+        "animalId": "ani_import_31",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_29",
+        "animalId": "ani_import_32",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_30",
+        "animalId": "ani_import_33",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_31",
+        "animalId": "ani_import_34",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_32",
+        "animalId": "ani_import_35",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_33",
+        "animalId": "ani_import_36",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_34",
+        "animalId": "ani_import_37",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_35",
+        "animalId": "ani_import_25",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_36",
+        "animalId": "ani_import_26",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_37",
+        "animalId": "ani_import_27",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_38",
+        "animalId": "ani_import_28",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_39",
+        "animalId": "ani_import_29",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_40",
+        "animalId": "ani_import_38",
+        "procedure": "Baño con Amitrax",
+        "date": "2026-02-12",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_41",
+        "animalId": "ani_import_18",
+        "procedure": "Hematura persistente, multiples manejos, persiste sangrado, descartada causa infecciosa, sin afectacion sistemica. Ceftriofur, vetercilin, Flunixilin, estrozoo. ATB intramamario por una teta con mastitis. Kavitex f1, quercetol, gluconato de calcio, pomada antiflojistica vacol, sulfato de magnesio, vitamina K, domosyn, dexametazona.",
+        "date": "2025-12-17",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_42",
+        "animalId": "ani_import_8",
+        "procedure": "Palida, delgada decaida, baja produccion, se aplica proxy, flumegan, incremento de concentrado.",
+        "date": "2025-12-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_43",
+        "animalId": "ani_import_8",
+        "procedure": "Presenta dolor abdominal marcado, se le aplica atb y analgesico.",
+        "date": "2026-01-29",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_44",
+        "animalId": "ani_import_6",
+        "procedure": "palida, decaida, muy delgada, se le aplica Dimoxiproc, tiamina IM, IMICAR",
+        "date": "2026-02-11",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_45",
+        "animalId": "ani_import_7",
+        "procedure": "Regular estaod general, fiebre, se aplica ampisulbactam-quincalf, fluxilin por fiebre",
+        "date": "2026-02-13",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_46",
+        "animalId": "ani_import_1",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-21",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_47",
+        "animalId": "ani_import_2",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-22",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_48",
+        "animalId": "ani_import_3",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-23",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_49",
+        "animalId": "ani_import_4",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-24",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_50",
+        "animalId": "ani_import_4",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-29, se baña con yodo 5 dias seguidos",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_51",
+        "animalId": "ani_import_6",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-26",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_52",
+        "animalId": "ani_import_7",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-27",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_53",
+        "animalId": "ani_import_8",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-28",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_54",
+        "animalId": "ani_import_9",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-29, se baña con yodo 5 dias seguidos",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_55",
+        "animalId": "ani_import_10",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-30",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_56",
+        "animalId": "ani_import_11",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-31",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_57",
+        "animalId": "ani_import_12",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-32",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_58",
+        "animalId": "ani_import_14",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-33",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_59",
+        "animalId": "ani_import_14",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-34",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_60",
+        "animalId": "ani_import_15",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-35",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_61",
+        "animalId": "ani_import_16",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-36",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_62",
+        "animalId": "ani_import_16",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-37",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_63",
+        "animalId": "ani_import_18",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-38",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_64",
+        "animalId": "ani_import_19",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-39",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_65",
+        "animalId": "ani_import_20",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-40",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_66",
+        "animalId": "ani_import_21",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-41",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_67",
+        "animalId": "ani_import_21",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-42",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_68",
+        "animalId": "ani_import_23",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-43",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_69",
+        "animalId": "ani_import_24",
+        "procedure": "Baño con amitrax dos dias seguidos, continuar esquema 0-7-14-44",
+        "date": "2026-02-19",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_70",
+        "animalId": "ani_import_1",
+        "procedure": "Pendiente cortar la cola, infeccion por hongos. Mastitis se aplica antimastitico intramamario",
+        "date": "2026-02-16",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_71",
+        "animalId": "ani_import_1",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_72",
+        "animalId": "ani_import_2",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_73",
+        "animalId": "ani_import_3",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_74",
+        "animalId": "ani_import_4",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_75",
+        "animalId": "ani_import_4",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_76",
+        "animalId": "ani_import_6",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_77",
+        "animalId": "ani_import_7",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_78",
+        "animalId": "ani_import_8",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_79",
+        "animalId": "ani_import_9",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_80",
+        "animalId": "ani_import_10",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_81",
+        "animalId": "ani_import_11",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_82",
+        "animalId": "ani_import_12",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_83",
+        "animalId": "ani_import_14",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_84",
+        "animalId": "ani_import_14",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_85",
+        "animalId": "ani_import_15",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_86",
+        "animalId": "ani_import_16",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_87",
+        "animalId": "ani_import_16",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_88",
+        "animalId": "ani_import_18",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_89",
+        "animalId": "ani_import_19",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_90",
+        "animalId": "ani_import_20",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_91",
+        "animalId": "ani_import_21",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_92",
+        "animalId": "ani_import_21",
+        "procedure": "Ivermectina 2cc SC",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_93",
+        "animalId": "ani_import_23",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "hev_import_94",
+        "animalId": "ani_import_24",
+        "procedure": "Eprinomectrina 5cc SC Tabla del cuello",
+        "date": "2026-02-10",
+        "createdBy": "user_import",
+        "createdAt": 0
+      }
+    ],
+    "boosters": [
+      {
+        "id": "boo_import_1",
+        "eventId": "hev_import_2",
+        "animalId": "ani_import_49",
+        "procedure": "Ricomax 5ml-Vacuna carbon 1era dosis",
+        "refDate": "2026-02-19",
+        "finca": "3C",
+        "status": "pending",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "boo_import_2",
+        "eventId": "hev_import_3",
+        "animalId": "ani_import_51",
+        "procedure": "Ricomax 15cc subcutáneo-Vacuna Reproductiv. Edoantripan 20cc c/l. Eco: útero sin tono folículo grande ovario derecho útero en anestro.",
+        "refDate": "2026-02-19",
+        "finca": "3C",
+        "status": "pending",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "boo_import_3",
+        "eventId": "hev_import_4",
+        "animalId": "ani_import_39",
+        "procedure": "Ricomax 5ml-Vacuna carbon 1era dosis",
+        "refDate": "2026-02-19",
+        "finca": "3C",
+        "status": "pending",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "boo_import_4",
+        "eventId": "hev_import_5",
+        "animalId": "ani_import_43",
+        "procedure": "Ricomax 15cc subcutáneo-Vacuna Reproductiv. Imidocar- Eco: útero sin tono útero en anestro. Abcseso en gluteo, impresiona babesia, No ordeñar.",
+        "refDate": "2027-02-19",
+        "finca": "3C",
+        "status": "pending",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "boo_import_5",
+        "eventId": "hev_import_6",
+        "animalId": "ani_import_43",
+        "procedure": "Ricomax 5ml-Vacuna carbon 1era dosis",
+        "refDate": "2026-02-19",
+        "finca": "3C",
+        "status": "pending",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "boo_import_6",
+        "eventId": "hev_import_7",
+        "animalId": "ani_import_47",
+        "procedure": "Ricomax 15cc subcutáneo-Vacuna Reproductiv. Imidocar- Eco: útero sin tono útero en anestro. Abcseso en gluteo, se drenó, impresiona babesia, No ordeñar.",
+        "refDate": "2027-02-19",
+        "finca": "3C",
+        "status": "pending",
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "boo_import_7",
+        "eventId": "hev_import_8",
+        "animalId": "ani_import_47",
+        "procedure": "Ricomax 5ml-Vacuna carbon 1era dosis, curagan en cuerno.",
+        "refDate": "2026-02-19",
+        "finca": "3C",
+        "status": "pending",
+        "createdBy": "user_import",
+        "createdAt": 0
+      }
+    ],
+    "repro": [],
+    "salesCheese": [
+      {
+        "id": "sale_import_1",
+        "date": "2026-01-19",
+        "client": "Nicolas Casab",
+        "lbs": 61.8,
+        "price": 9000.0,
+        "total": 556200.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_2",
+        "date": "2026-01-21",
+        "client": "Nicolas Casab",
+        "lbs": 46.4,
+        "price": 9000.0,
+        "total": 417600.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_3",
+        "date": "2026-01-21",
+        "client": "Tienda Vereda Malagana",
+        "lbs": 10.5,
+        "price": 10000.0,
+        "total": 105000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_4",
+        "date": "2026-01-22",
+        "client": "Diana",
+        "lbs": 18.0,
+        "price": 9500.0,
+        "total": 171000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_5",
+        "date": "2026-01-22",
+        "client": "Irma",
+        "lbs": 3.0,
+        "price": 11000.0,
+        "total": 33000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_6",
+        "date": "2026-01-22",
+        "client": "Viviana Clinica",
+        "lbs": 5.5,
+        "price": 11000.0,
+        "total": 60500.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_7",
+        "date": "2026-01-22",
+        "client": "Nicolas Casab",
+        "lbs": 32.8,
+        "price": 9000.0,
+        "total": 295200.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_8",
+        "date": "2026-01-23",
+        "client": "Tienda Vereda Malagana",
+        "lbs": 10.0,
+        "price": 10000.0,
+        "total": 100000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_9",
+        "date": "2026-01-25",
+        "client": "Nicolas Casab",
+        "lbs": 83.4,
+        "price": 9000.0,
+        "total": 750600.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_10",
+        "date": "2026-01-26",
+        "client": "Tienda Vereda Malagana",
+        "lbs": 11.2,
+        "price": 10000.0,
+        "total": 112000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_11",
+        "date": "2026-01-28",
+        "client": "Nicolas Casab",
+        "lbs": 92.4,
+        "price": 9000.0,
+        "total": 831600.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_12",
+        "date": "2026-01-31",
+        "client": "Nicolas Casab",
+        "lbs": 73.8,
+        "price": 9000.0,
+        "total": 664200.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_13",
+        "date": "2026-02-02",
+        "client": "Nicolas Casab",
+        "lbs": 57.8,
+        "price": 10000.0,
+        "total": 578000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_14",
+        "date": "2026-02-02",
+        "client": "Tienda Vereda Malagana",
+        "lbs": 11.0,
+        "price": 10000.0,
+        "total": 110000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_15",
+        "date": "2026-02-03",
+        "client": "Nicolas Casab",
+        "lbs": 82.0,
+        "price": 10000.0,
+        "total": 820000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_16",
+        "date": "2026-02-05",
+        "client": "Tienda Vereda Malagana",
+        "lbs": 11.7,
+        "price": 10000.0,
+        "total": 117000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_17",
+        "date": "2026-02-06",
+        "client": "Irma",
+        "lbs": 4.0,
+        "price": 11000.0,
+        "total": 44000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_18",
+        "date": "2026-02-06",
+        "client": "Clinica",
+        "lbs": 5.0,
+        "price": 11000.0,
+        "total": 55000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_19",
+        "date": "2026-02-06",
+        "client": "Nicolas Casab",
+        "lbs": 55.8,
+        "price": 10000.0,
+        "total": 558000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_20",
+        "date": "2026-02-07",
+        "client": "Tienda Vereda Malagana",
+        "lbs": 12.8,
+        "price": 10000.0,
+        "total": 128000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_21",
+        "date": "2026-02-07",
+        "client": "Nicolas Casab",
+        "lbs": 66.6,
+        "price": 10000.0,
+        "total": 666000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_22",
+        "date": "2026-02-08",
+        "client": "Nicolas Casab",
+        "lbs": 18.0,
+        "price": 10000.0,
+        "total": 180000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_23",
+        "date": "2026-02-09",
+        "client": "Nicolas Casab",
+        "lbs": 54.4,
+        "price": 10000.0,
+        "total": 544000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_24",
+        "date": "2026-02-11",
+        "client": "Nicolas Casab",
+        "lbs": 32.0,
+        "price": 10000.0,
+        "total": 320000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_25",
+        "date": "2026-02-11",
+        "client": "Nicolas Casab",
+        "lbs": 8.8,
+        "price": 10000.0,
+        "total": 88000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_26",
+        "date": "2026-02-11",
+        "client": "Noelia",
+        "lbs": 13.8,
+        "price": 10000.0,
+        "total": 138000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_27",
+        "date": "2026-02-11",
+        "client": "Lobo",
+        "lbs": 19.7,
+        "price": 10000.0,
+        "total": 197000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_28",
+        "date": "2026-02-13",
+        "client": "Nicolas Casab",
+        "lbs": 16.0,
+        "price": 10000.0,
+        "total": 160000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_29",
+        "date": "2026-02-13",
+        "client": "Nicolas Casab",
+        "lbs": 70.3,
+        "price": 10000.0,
+        "total": 703000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_30",
+        "date": "2026-02-14",
+        "client": "Noelia",
+        "lbs": 24.4,
+        "price": 10000.0,
+        "total": 244000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_31",
+        "date": "2026-02-15",
+        "client": "Nicolas Casab",
+        "lbs": 0.0,
+        "price": 0.0,
+        "total": 0.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "sale_import_32",
+        "date": "2026-02-16",
+        "client": "Nicolas Casab",
+        "lbs": 0.0,
+        "price": 0.0,
+        "total": 0.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      }
+    ],
+    "buyMilk": [
+      {
+        "id": "buy_import_1",
+        "period": "05-01-26 al 11-01-26",
+        "liters": 704.0,
+        "vl": 2000.0,
+        "total": 1408000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "buy_import_2",
+        "period": "12-01-26 al 18-01-26",
+        "liters": 847.0,
+        "vl": 2000.0,
+        "total": 1694000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "buy_import_3",
+        "period": "19-01-26 al 25-01-26",
+        "liters": 832.0,
+        "vl": 2000.0,
+        "total": 1664000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "buy_import_4",
+        "period": "26-01-26 al 01-02-26",
+        "liters": 937.0,
+        "vl": 2000.0,
+        "total": 1874000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "buy_import_5",
+        "period": "02-02-26 al 08-02-26",
+        "liters": 867.0,
+        "vl": 2000.0,
+        "total": 1734000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      }
+    ],
+    "transMilk": [
+      {
+        "id": "tm_import_1",
+        "period": "05-01-26 al 11-01-26",
+        "value": 8000.0,
+        "qty": 7.0,
+        "total": 56000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "tm_import_2",
+        "period": "12-01-26 al 18-01-26",
+        "value": 12000.0,
+        "qty": 7.0,
+        "total": 84000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "tm_import_3",
+        "period": "19-01-26 al 25-01-26",
+        "value": 12000.0,
+        "qty": 7.0,
+        "total": 84000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "tm_import_4",
+        "period": "26-01-26 al 01-02-26",
+        "value": 12000.0,
+        "qty": 7.0,
+        "total": 84000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "tm_import_5",
+        "period": "02-02-26 al 08-02-26",
+        "value": 12000.0,
+        "qty": 7.0,
+        "total": 84000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "tm_import_6",
+        "period": "09-02-26 al 15-02-26",
+        "value": 12000.0,
+        "qty": 7.0,
+        "total": 84000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      }
+    ],
+    "fixedCosts": [
+      {
+        "id": "fx_import_1",
+        "concept": "Nomina Colaboradores",
+        "value": 6500000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_2",
+        "concept": "Seg Social",
+        "value": 2000000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_3",
+        "concept": "Aseo OPS",
+        "value": 320000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_4",
+        "concept": "Nomina Contador",
+        "value": 1500000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_5",
+        "concept": "Revisor Fiscal",
+        "value": 2000000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_6",
+        "concept": "Servicios Publicos",
+        "value": 2000000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_7",
+        "concept": "TV-Internet",
+        "value": 150000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_8",
+        "concept": "Veterinario",
+        "value": 300000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_9",
+        "concept": "Medicamentos e insumos animales/mes",
+        "value": 1500000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_10",
+        "concept": "Alimentos e insumos de aseo/EPP",
+        "value": 1500000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_11",
+        "concept": "Herbicidas/plagicidas/suelo",
+        "value": 500000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_12",
+        "concept": "Insumos Queso",
+        "value": 250000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_13",
+        "concept": "Poliza RC Guadalupe",
+        "value": 134000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_14",
+        "concept": "Poliza Ganadera",
+        "value": 7260000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_15",
+        "concept": "Suplementación Bovinos",
+        "value": 1000000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_16",
+        "concept": "(Queso) Compra leche",
+        "value": 3000000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_17",
+        "concept": "(Queso) Mensajero busca leche",
+        "value": 240000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      },
+      {
+        "id": "fx_import_18",
+        "concept": "(Queso) Transporte queso Nicolás",
+        "value": 250000.0,
+        "createdBy": "user_import",
+        "createdAt": 0
+      }
+    ]
+  }
+}

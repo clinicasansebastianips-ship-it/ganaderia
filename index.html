@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ganadería Offline</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🐄</div>
+      <div>
+        <div class="title">Ganadería Offline</div>
+        <div class="subtitle">Inventario • Ordeño • Sanidad • Reproducción • Finanzas • Alertas</div>
+      </div>
+    </div>
+
+    <div class="userbox">
+      <label class="label">Usuario</label>
+      <select id="userSelect"></select>
+      <button id="addUserBtn" class="btn secondary">+ Usuario</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="dashboard">Panel</button>
+    <button class="tab" data-tab="animals">Animales</button>
+    <button class="tab" data-tab="milk">Ordeño</button>
+    <button class="tab" data-tab="health">Sanidad</button>
+    <button class="tab" data-tab="repro">Reproducción</button>
+    <button class="tab" data-tab="finance">Finanzas</button>
+  </nav>
+
+  <main class="container">
+    <section class="view" id="view-dashboard">
+      <section class="grid">
+        <div class="card">
+          <div class="card-h">Alertas</div>
+          <div class="alert-grid">
+            <div class="metric"><div class="metric-k">Refuerzos vencidos</div><div class="metric-v" id="mOverdue">0</div></div>
+            <div class="metric"><div class="metric-k">Refuerzos ≤ 3 días</div><div class="metric-v" id="mD3">0</div></div>
+            <div class="metric"><div class="metric-k">Refuerzos ≤ 10 días</div><div class="metric-v" id="mD10">0</div></div>
+            <div class="metric"><div class="metric-k">Refuerzos ≤ 15 días</div><div class="metric-v" id="mD15">0</div></div>
+            <div class="metric"><div class="metric-k">Producción baja (&lt;4L) últimos 7 días</div><div class="metric-v" id="mLowMilk">0</div></div>
+            <div class="metric"><div class="metric-k">Repro “REVISAR” (&gt;120 días)</div><div class="metric-v" id="mRepro">0</div></div>
+          </div>
+          <div class="divider"></div>
+          <div class="list" id="alertsList"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-h">Acciones rápidas</div>
+          <div class="actions">
+            <button class="btn" id="quickMilk">+ Ordeño</button>
+            <button class="btn" id="quickHealth">+ Sanidad</button>
+            <button class="btn" id="quickRepro">+ Reproducción</button>
+            <button class="btn secondary" id="exportBtn">Exportar respaldo (JSON)</button>
+            <label class="btn secondary filebtn">
+              Importar respaldo (JSON)
+              <input type="file" id="importFile" accept="application/json" />
+            </label>
+
+            <label class="btn secondary filebtn">
+              Importar desde Excel (XLSX)
+              <input type="file" id="importExcelFile" accept=".xlsx" />
+            </label>
+
+          </div>
+          <div class="divider"></div>
+          <div class="small">✅ Offline • 📱 Instalable • 👤 Multiusuario local</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-h">Ranking de vacas (últimos 30 días)</div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Vaca</th><th>Litros (30d)</th><th>Promedio/día</th></tr></thead>
+            <tbody id="rankTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="view hidden" id="view-animals">
+      <section class="card">
+        <div class="card-h">Inventario de animales</div>
+        <div class="filters">
+          <button class="btn" id="addAnimalBtn">+ Agregar animal</button>
+          <input id="searchAnimals" placeholder="Buscar por arete o nombre..." />
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Arete</th><th>Nombre</th><th>Finca</th><th>Sexo</th><th>Raza</th><th></th></tr></thead>
+            <tbody id="animalsTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="view hidden" id="view-milk">
+      <section class="card">
+        <div class="card-h">Registro de ordeño (por vaca)</div>
+        <div class="filters">
+          <button class="btn" id="addMilkBtn">+ Registrar ordeño</button>
+          <input id="searchMilk" placeholder="Buscar por arete o nombre..." />
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Fecha</th><th>Vaca</th><th>Mañana</th><th>Tarde</th><th>Total</th><th>Usuario</th><th></th></tr></thead>
+            <tbody id="milkTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="view hidden" id="view-health">
+      <section class="card">
+        <div class="card-h">Sanidad + refuerzos</div>
+        <div class="filters">
+          <button class="btn" id="addHealthBtn">+ Registrar sanidad</button>
+          <select id="filterBoosters">
+            <option value="all">Refuerzos: todos</option>
+            <option value="overdue">Vencidos</option>
+            <option value="d3">≤ 3 días</option>
+            <option value="d10">≤ 10 días</option>
+            <option value="d15">≤ 15 días</option>
+            <option value="ok">OK</option>
+            <option value="done">Hechos</option>
+          </select>
+          <input id="searchBoosters" placeholder="Buscar por arete o nombre..." />
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Animal</th><th>Procedimiento</th><th>Refuerzo</th><th>Estado</th><th>Creado por</th><th></th></tr></thead>
+            <tbody id="boostersTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="view hidden" id="view-repro">
+      <section class="card">
+        <div class="card-h">Reproducción</div>
+        <div class="filters">
+          <button class="btn" id="addReproBtn">+ Registrar repro</button>
+          <select id="filterRepro">
+            <option value="all">Todas</option>
+            <option value="revisar">Solo REVISAR (&gt;120 días)</option>
+          </select>
+          <input id="searchRepro" placeholder="Buscar por arete o nombre..." />
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Vaca</th><th>Último parto</th><th>Último celo</th><th>Inseminación</th><th>Preñez</th><th>Días abiertos</th><th>Alerta</th><th></th></tr></thead>
+            <tbody id="reproTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="view hidden" id="view-finance">
+      <section class="grid">
+        <div class="card">
+          <div class="card-h">Ventas de queso</div>
+          <div class="filters"><button class="btn" id="addSaleBtn">+ Venta</button></div>
+          <div class="tablewrap">
+            <table>
+              <thead><tr><th>Fecha</th><th>Cliente</th><th>Libras</th><th>Precio</th><th>Total</th><th></th></tr></thead>
+              <tbody id="salesTbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-h">Compras / Transportes / Gastos fijos</div>
+          <div class="actions">
+            <button class="btn" id="addBuyMilkBtn">+ Compra leche</button>
+            <button class="btn" id="addTransMilkBtn">+ Transporte leche</button>
+            <button class="btn" id="addFixedBtn">+ Gasto fijo</button>
+          </div>
+          <div class="divider"></div>
+          <div class="list" id="financeSummary"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-h">Registros financieros</div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Tipo</th><th>Periodo</th><th>Detalle</th><th>Total</th><th></th></tr></thead>
+            <tbody id="financeTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <div class="modal-h">
+        <div id="modalTitle">Formulario</div>
+        <button class="iconbtn" id="closeModal">✕</button>
+      </div>
+      <div class="modal-b" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+    }
+  </script>
+</body>
+</html>
