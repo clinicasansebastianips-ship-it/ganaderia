@@ -1,4 +1,4 @@
-const CACHE = 'ganaderia-offline-v2';
+const CACHE = 'ganaderia-offline-v4';
 const ASSETS = ['./','./index.html','./styles.css','./app.js','./manifest.json','./icon.svg','./sw.js'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS))); self.skipWaiting(); });
 self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));

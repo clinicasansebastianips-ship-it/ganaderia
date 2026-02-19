@@ -1,5 +1,7 @@
 const DB_NAME="ganaderia_offline", DB_VERSION=2;
-const STORES={users:"users",animals:"animals",milk:"milk",healthEvents:"healthEvents",boosters:"boosters",repro:"repro",salesCheese:"salesCheese",buyMilk:"buyMilk",transMilk:"transMilk",fixedCosts:"fixedCosts"};
+const STORES={
+  brutos:"brutos",
+  meds:"meds",users:"users",animals:"animals",milk:"milk",healthEvents:"healthEvents",boosters:"boosters",repro:"repro",salesCheese:"salesCheese",buyMilk:"buyMilk",transMilk:"transMilk",fixedCosts:"fixedCosts"};
 const uid=(p="id")=>`${p}_${Date.now()}_${Math.random().toString(16).slice(2)}`;
 const $=(id)=>document.getElementById(id);
 const todayISO=()=>new Date().toISOString().slice(0,10);
@@ -90,6 +92,7 @@ function renderAnimals(){
     .forEach(a=>{
       const tr=document.createElement("tr");
       tr.innerHTML=`<td>${a.arete||"—"}</td><td>${a.name||"—"}</td><td>${a.finca||"—"}</td><td>${a.sexo||"—"}</td><td>${a.raza||"—"}</td><td><button class="btn secondary">Eliminar</button></td>`;
+      if(lastMilkDays(a.id)>2){ tr.classList.add('nomilk'); }
       tr.querySelector("button").onclick=async()=>{await delRow(STORES.animals,a.id); await renderAll();};
       tb.appendChild(tr);
     });
@@ -374,6 +377,8 @@ function renderDashboard(){
     div.innerHTML=`<div><div><b>Producción baja</b> — ${animalLabel(m.animalId)}</div><div class="small">Fecha: ${m.date} • Total: <b>${m.total||0} L</b></div></div><span class="badge bad">&lt;4L</span>`;
     list.appendChild(div);
   });
+  const noMilk = (state.animals||[]).filter(a=>lastMilkDays(a.id)>2).length;
+  if(noMilk>0){ const div=document.createElement('div'); div.className='item'; div.innerHTML=`<div><div><b>Sin ordeño &gt;2 días</b> — ${noMilk} vaca(s)</div><div class="small">Revisar posible mastitis/enfermedad</div></div><span class="badge bad">ALERTA</span>`; document.getElementById('alertsList').appendChild(div);} const pre=(state.animals||[]).filter(a=>daysTo(a.fechaPartoProb)>=0 && daysTo(a.fechaPartoProb)<=15).length; if(pre>0){ const dv=document.createElement('div'); dv.className='item'; dv.innerHTML=`<div><div><b>Próximo parto (&le;15 días)</b> — ${pre} vaca(s)</div><div class=\"small\">Preparar corral, calostro y vigilancia</div></div><span class=\"badge warn\">ATENCIÓN</span>`; document.getElementById('alertsList').appendChild(dv);} 
   if(reproRevisar>0){
     const div=document.createElement("div"); div.className="item";
     div.innerHTML=`<div><div><b>Reproducción</b> — ${reproRevisar} vaca(s) con &gt;120 días abiertos</div><div class="small">Ir a Reproducción → filtro REVISAR</div></div><span class="badge bad">REVISAR</span>`;
@@ -454,3 +459,300 @@ if(excelInput){
   });
 }
 
+
+
+
+/* ====== EXTENSION v3: Tablas completas (Activos/Brutos/Medicamentos) ====== */
+async function getStoreAll(name){ return await getAll(STORES[name]||name); }
+
+async function openAnimalFormV3(){
+  showModal("Agregar bovino activo",`<div class="formgrid">
+    ${formInput("aFinca","Finca","text","","")}
+    ${formInput("aNombreArete","Nombre/Arete","text","","")}
+    ${formInput("aArete","Arete","text","","")}
+    ${formSelect("aSexo","Sexo",[{value:"Hembra",label:"Hembra"},{value:"Macho",label:"Macho"}],"Hembra")}
+    ${formInput("aEdadTxt","Edad (texto)","text","","")}
+    ${formInput("aPesoTxt","Peso (texto)","text","","")}
+    ${formInput("aPesoKg","Peso (kg)","number","","")}
+    ${formInput("aRaza","Raza","text","","")}
+    ${formInput("aNac","Fecha nacimiento","date","")}
+    ${formInput("aAnot","Anotaciones","text","","")}
+    ${formInput("aEdadAnios","Edad (años aprox)","number","","")}
+    <div class="full"><button class="btn" id="saveA3">Guardar</button></div>
+  </div>`);
+  $("saveA3").onclick=async()=>{
+    await put(STORES.animals,{
+      id:uid("ani"),
+      finca:$("aFinca").value.trim(),
+      nombreArete:$("aNombreArete").value.trim(),
+      arete:$("aArete").value.trim(),
+      sexo:$("aSexo").value,
+      edadTxt:$("aEdadTxt").value.trim(),
+      pesoTxt:$("aPesoTxt").value.trim(),
+      pesoKg:Number($("aPesoKg").value||0),
+      raza:$("aRaza").value.trim(),
+      fechaNac:$("aNac").value||"",
+      anotaciones:$("aAnot").value.trim(),
+      edadAnios:Number($("aEdadAnios").value||0),
+      createdBy:state.userId, createdAt:Date.now()
+    });
+    closeModal(); await renderAll();
+  };
+}
+
+const addAnimalBtn=document.getElementById("addAnimalBtn");
+if(addAnimalBtn){
+  addAnimalBtn.onclick=openAnimalFormV3;
+}
+
+
+function renderAnimalsV3(){
+  const tb=document.getElementById("animalsTbody"); if(!tb) return;
+  const q=(document.getElementById("searchAnimals")?.value||"").toLowerCase();
+  tb.innerHTML="";
+  (state.animals||[]).filter(a=>!q||(`${a.arete||""} ${a.nombreArete||a.name||""} ${a.finca||""}`).toLowerCase().includes(q))
+    .sort((a,b)=>(a.arete||"").localeCompare(b.arete||""))
+    .forEach(a=>{
+      const tr=document.createElement("tr");
+      tr.innerHTML=`
+        <td>${cellInput(a.finca,"finca")}</td>
+        <td>${cellInput(a.nombreArete||a.name,"nombreArete")}</td>
+        <td>${cellInput(a.arete,"arete")}</td>
+        <td>${cellInput(a.sexo,"sexo")}</td>
+        <td>${cellInput(a.edadTxt,"edadTxt")}</td>
+        <td>${cellInput(a.pesoTxt,"pesoTxt")}</td>
+        <td>${cellInput(a.pesoKg,"pesoKg","number")}</td>
+        <td>${cellInput(a.raza,"raza")}</td>
+        <td>${cellInput(a.fechaNac,"fechaNac")}</td>
+        <td>${cellInput(a.anotaciones,"anotaciones")}</td>
+        <td>${cellInput(a.edadAnios,"edadAnios","number")}</td>
+        <td>${cellInput(a.fechaPartoProb,"fechaPartoProb")}</td>
+        <td><button class="btn secondary">Eliminar</button></td>`;
+      tr.querySelector("button").onclick=async()=>{await delRow(STORES.animals,a.id); await renderAll();};
+      if(daysTo(a.fechaPartoProb)>=0 && daysTo(a.fechaPartoProb)<=15){ tr.classList.add('preparto'); }
+      wireRowSave(tr,"animals",a);
+      tb.appendChild(tr);
+    });
+}
+
+const searchAnimals=document.getElementById("searchAnimals");
+if(searchAnimals){ searchAnimals.oninput=renderAnimalsV3; }
+
+async function openBrutoForm(){
+  showModal("Agregar bovino bruto",`<div class="formgrid">
+    ${formInput("bEstado","Estado/Nota","text","","")}
+    ${formInput("bFinca","Finca","text","","")}
+    ${formInput("bNombreArete","Nombre/Arete","text","","")}
+    ${formInput("bArete","Arete","text","","")}
+    ${formSelect("bSexo","Sexo",[{value:"Hembra",label:"Hembra"},{value:"Macho",label:"Macho"}],"Hembra")}
+    ${formInput("bEdad","Edad","text","","")}
+    ${formInput("bPeso","Peso","text","","")}
+    ${formInput("bRaza","Raza","text","","")}
+    ${formInput("bNac","Fecha nacimiento","date","")}
+    ${formInput("bAnot","Anotaciones","text","","")}
+    <div class="full"><button class="btn" id="saveBrt">Guardar</button></div>
+  </div>`);
+  $("saveBrt").onclick=async()=>{
+    await put(STORES.brutos,{id:uid("brt"),
+      estadoNota:$("bEstado").value.trim(),
+      finca:$("bFinca").value.trim(),
+      nombreArete:$("bNombreArete").value.trim(),
+      arete:$("bArete").value.trim(),
+      sexo:$("bSexo").value,
+      edad:$("bEdad").value.trim(),
+      peso:$("bPeso").value.trim(),
+      raza:$("bRaza").value.trim(),
+      fechaNac:$("bNac").value||"",
+      anotaciones:$("bAnot").value.trim(),
+      createdBy:state.userId, createdAt:Date.now()
+    });
+    closeModal(); await renderAll();
+  };
+}
+document.getElementById("addBrutoBtn")?.addEventListener("click", openBrutoForm);
+document.getElementById("searchBrutos")?.addEventListener("input", renderBrutos);
+
+
+function renderBrutos(){
+  const tb=document.getElementById("brutosTbody"); if(!tb) return;
+  const q=(document.getElementById("searchBrutos")?.value||"").toLowerCase();
+  tb.innerHTML="";
+  (state.brutos||[]).filter(b=>!q||(`${b.arete||""} ${b.nombreArete||""} ${b.finca||""} ${b.estadoNota||""}`).toLowerCase().includes(q))
+    .sort((a,b)=>(a.arete||"").localeCompare(b.arete||""))
+    .forEach(b=>{
+      const tr=document.createElement("tr");
+      tr.innerHTML=`
+        <td>${cellInput(b.estadoNota,"estadoNota")}</td>
+        <td>${cellInput(b.finca,"finca")}</td>
+        <td>${cellInput(b.nombreArete,"nombreArete")}</td>
+        <td>${cellInput(b.arete,"arete")}</td>
+        <td>${cellInput(b.sexo,"sexo")}</td>
+        <td>${cellInput(b.edad,"edad")}</td>
+        <td>${cellInput(b.peso,"peso")}</td>
+        <td>${cellInput(b.raza,"raza")}</td>
+        <td>${cellInput(b.fechaNac,"fechaNac")}</td>
+        <td>${cellInput(b.anotaciones,"anotaciones")}</td>
+        <td><button class="btn secondary">Eliminar</button></td>`;
+      tr.querySelector("button").onclick=async()=>{await delRow(STORES.brutos,b.id); await renderAll();};
+      wireRowSave(tr,"brutos",b);
+      tb.appendChild(tr);
+    });
+}
+
+
+function extractDates(text){
+  const out=[]; if(!text) return out;
+  const re=/(\d{1,2})[-/](\d{1,2})[-/](\d{2,4})/g; let m;
+  while((m=re.exec(text))!==null){
+    let d=parseInt(m[1],10), mo=parseInt(m[2],10), y=parseInt(m[3],10);
+    if(y<100) y+=2000;
+    const dt=new Date(y,mo-1,d);
+    if(!isNaN(dt)) out.push(dt.toISOString().slice(0,10));
+  }
+  return [...new Set(out)];
+}
+async function openMedForm(){
+  showModal("Registrar medicamento/procedimiento",`<div class="formgrid">
+    ${formInput("mFinca","Finca","text","","")}
+    ${formInput("mNombre","Nombre","text","","")}
+    ${formSelect("mSexo","Sexo",[{value:"Hembra",label:"Hembra"},{value:"Macho",label:"Macho"}],"Hembra")}
+    ${formInput("mFecha","Fecha","date",todayISO())}
+    ${formInput("mProc","Medicamento/Procedimiento","text","","")}
+    ${formInput("mResp","Responsable","text","","")}
+    ${formInput("mPlan","Plan","text","","Ej: refuerzo 10/03/2026 y 25/03/2026")}
+    ${formInput("mCosto","Costo (COP)","number","","")}
+    ${formInput("mNotas","Notas","text","","")}
+    <div class="full"><button class="btn" id="saveMed">Guardar</button></div>
+  </div>`);
+  $("saveMed").onclick=async()=>{
+    const rec={id:uid("med"),finca:$("mFinca").value.trim(),nombre:$("mNombre").value.trim(),sexo:$("mSexo").value,
+      fecha:$("mFecha").value||todayISO(),procedimiento:$("mProc").value.trim(),responsable:$("mResp").value.trim(),
+      plan:$("mPlan").value.trim(),costo:Number($("mCosto").value||0),notas:$("mNotas").value.trim(),
+      createdBy:state.userId, createdAt:Date.now()};
+    await put(STORES.meds,rec);
+
+    // Crear refuerzos si coincide con un animal
+    const a=(state.animals||[]).find(x=>(x.nombreArete||x.name||"").toLowerCase()===rec.nombre.toLowerCase() || (x.arete||"")===rec.nombre);
+    const ds=extractDates(rec.plan);
+    if(a && ds.length){
+      const eventId=uid("hev");
+      await put(STORES.healthEvents,{id:eventId,animalId:a.id,procedure:rec.procedimiento,date:rec.fecha,createdBy:state.userId,createdAt:Date.now()});
+      for(const rd of ds){
+        await put(STORES.boosters,{id:uid("boo"),eventId,animalId:a.id,procedure:rec.procedimiento,refDate:rd,finca:rec.finca,status:"pending",createdBy:state.userId,createdAt:Date.now()});
+      }
+    }
+    closeModal(); await renderAll();
+  };
+}
+document.getElementById("addMedBtn")?.addEventListener("click", openMedForm);
+document.getElementById("quickMeds")?.addEventListener("click", ()=>{ setTab("meds"); openMedForm(); });
+document.getElementById("searchMeds")?.addEventListener("input", renderMeds);
+
+
+function renderMeds(){
+  const tb=document.getElementById("medsTbody"); if(!tb) return;
+  const q=(document.getElementById("searchMeds")?.value||"").toLowerCase();
+  tb.innerHTML="";
+  (state.meds||[]).slice().sort((a,b)=>(b.fecha||"").localeCompare(a.fecha||""))
+    .filter(m=>!q||(`${m.finca||""} ${m.nombre||""} ${m.procedimiento||""} ${m.responsable||""}`).toLowerCase().includes(q))
+    .forEach(m=>{
+      const tr=document.createElement("tr");
+      tr.innerHTML=`
+        <td>${cellInput(m.finca,"finca")}</td>
+        <td>${cellInput(m.nombre,"nombre")}</td>
+        <td>${cellInput(m.sexo,"sexo")}</td>
+        <td>${cellInput(m.fecha,"fecha")}</td>
+        <td>${cellInput(m.procedimiento,"procedimiento")}</td>
+        <td>${cellInput(m.responsable,"responsable")}</td>
+        <td>${cellInput(m.plan,"plan")}</td>
+        <td>${cellInput(m.costo,"costo","number")}</td>
+        <td>${cellInput(m.notas,"notas")}</td>
+        <td><button class="btn secondary">Eliminar</button></td>`;
+      tr.querySelector("button").onclick=async()=>{await delRow(STORES.meds,m.id); await renderAll();};
+      wireRowSave(tr,"meds",m);
+      tb.appendChild(tr);
+    });
+}
+
+
+// Patch refresh() to include brutos/meds in state if not already loaded
+const _refresh = refresh;
+refresh = async function(){
+  await _refresh();
+  try{ state.brutos = await getAll(STORES.brutos); }catch(e){}
+  try{ state.meds = await getAll(STORES.meds); }catch(e){}
+};
+
+// Patch renderAll to call new renderers
+const _renderAll = renderAll;
+renderAll = async function(){
+  await _renderAll();
+  renderAnimalsV3();
+  renderBrutos();
+  renderMeds();
+};
+
+
+/* INLINE_EDIT_HELPERS_V4 */
+function esc(s){ return (s??"").toString().replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
+function cellInput(value, field, type="text"){
+  const v = value ?? "";
+  const t = type==="number" ? "number" : "text";
+  return `<input class="cell" data-f="${field}" type="${t}" value="${esc(v)}" />`;
+}
+function wireRowSave(tr, storeName, rowObj){
+  const inputs = tr.querySelectorAll("input.cell");
+  inputs.forEach(inp=>{
+    const field = inp.dataset.f;
+    const isNum = inp.type==="number";
+    const commit = async ()=>{
+      let val = inp.value;
+      if(isNum) val = Number(val||0);
+      rowObj[field] = val;
+      rowObj.updatedAt = Date.now();
+      rowObj.updatedBy = state.userId;
+      await put(STORES[storeName]||storeName, rowObj);
+    };
+    inp.addEventListener("blur", commit);
+    inp.addEventListener("keydown", (e)=>{
+      if(e.key==="Enter"){ e.preventDefault(); inp.blur(); }
+    });
+  });
+}
+
+/* QUICK_ROW_V5 */
+async function addQuickAnimal(){
+  const row={id:uid("ani"),finca:"",nombreArete:"",arete:"",sexo:"Hembra",edadTxt:"",pesoTxt:"",pesoKg:0,raza:"",fechaNac:"",anotaciones:"",edadAnios:0,createdBy:state.userId,createdAt:Date.now()};
+  await put(STORES.animals,row); await renderAll();
+  setTimeout(()=>{ document.querySelector("#animalsTbody input.cell")?.focus(); },50);
+}
+async function addQuickBruto(){
+  const row={id:uid("brt"),estadoNota:"",finca:"",nombreArete:"",arete:"",sexo:"Hembra",edad:"",peso:"",raza:"",fechaNac:"",anotaciones:"",createdBy:state.userId,createdAt:Date.now()};
+  await put(STORES.brutos,row); await renderAll();
+  setTimeout(()=>{ document.querySelector("#brutosTbody input.cell")?.focus(); },50);
+}
+async function addQuickMed(){
+  const row={id:uid("med"),finca:"",nombre:"",sexo:"Hembra",fecha:todayISO(),procedimiento:"",responsable:"",plan:"",costo:0,notas:"",createdBy:state.userId,createdAt:Date.now()};
+  await put(STORES.meds,row); await renderAll();
+  setTimeout(()=>{ document.querySelector("#medsTbody input.cell")?.focus(); },50);
+}
+document.getElementById("quickRowAnimals")?.addEventListener("click",addQuickAnimal);
+document.getElementById("quickRowBrutos")?.addEventListener("click",addQuickBruto);
+document.getElementById("quickRowMeds")?.addEventListener("click",addQuickMed);
+
+/* NO_MILK_ALERT_V6 */
+function lastMilkDays(animalId){
+  let last=null;
+  (state.milk||[]).forEach(m=>{ if(m.animalId===animalId){ const d=parseISO(m.date); if(d && (!last||d>last)) last=d; }});
+  if(!last) return 9999;
+  return daysSince(last);
+}
+
+/* PREPARTO_ALERT_V7 */
+function daysTo(dateStr){
+  if(!dateStr) return 9999;
+  const d=parseISO(dateStr); if(!d) return 9999;
+  const today=new Date(); today.setHours(0,0,0,0);
+  const diff=(d - today)/(1000*60*60*24);
+  return Math.floor(diff);
+}

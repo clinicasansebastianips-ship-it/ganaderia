@@ -122,3 +122,25 @@ thead th{position:sticky; top:0; background:#0b1220; z-index:1}
 }
 .tab.active{background:rgba(37,99,235,.35); border-color: rgba(37,99,235,.6);}
 .view.hidden{display:none}
+
+/* Inline table editing */
+input.cell{
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 8px 10px;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+input.cell:focus{
+  background: rgba(148,163,184,0.12);
+  border-radius: 10px;
+}
+td{ padding:0; }
+
+/* highlight animals without milk */
+tr.nomilk{ background: rgba(220,38,38,0.18); }
+
+/* highlight prepartum animals */
+tr.preparto{ background: rgba(245,158,11,0.22); }

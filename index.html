@@ -55,6 +55,7 @@
           <div class="card-h">Acciones rápidas</div>
           <div class="actions">
             <button class="btn" id="quickMilk">+ Ordeño</button>
+            <button class="btn" id="quickMeds">+ Medicamento</button>
             <button class="btn" id="quickHealth">+ Sanidad</button>
             <button class="btn" id="quickRepro">+ Reproducción</button>
             <button class="btn secondary" id="exportBtn">Exportar respaldo (JSON)</button>
@@ -89,19 +90,65 @@
       <section class="card">
         <div class="card-h">Inventario de animales</div>
         <div class="filters">
+          <button class="btn secondary" id="quickRowAnimals">+ Fila rápida</button>
           <button class="btn" id="addAnimalBtn">+ Agregar animal</button>
           <input id="searchAnimals" placeholder="Buscar por arete o nombre..." />
         </div>
         <div class="tablewrap">
           <table>
-            <thead><tr><th>Arete</th><th>Nombre</th><th>Finca</th><th>Sexo</th><th>Raza</th><th></th></tr></thead>
+            <thead><tr><th>Finca</th><th>Nombre/Arete</th><th>Arete</th><th>Sexo</th><th>Edad (texto)</th><th>Peso (texto)</th><th>Peso (kg)</th><th>Raza</th><th>Fecha Nac.</th><th>Anotaciones</th><th>Edad (años)</th><th></th></tr></thead>
             <tbody id="animalsTbody"></tbody>
           </table>
         </div>
+      
+    </section>
+
+    <section class="view hidden" id="view-brutos">
+      <section class="card">
+        <div class="card-h">Bovinos Brutos</div>
+        <div class="filters">
+          <button class="btn secondary" id="quickRowBrutos">+ Fila rápida</button>
+          <button class="btn" id="addBrutoBtn">+ Agregar</button>
+          <input id="searchBrutos" placeholder="Buscar por arete o nombre..." />
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Estado/Nota</th><th>Finca</th><th>Nombre/Arete</th><th>Arete</th><th>Sexo</th><th>Edad</th><th>Peso</th><th>Raza</th><th>Fecha Nac.</th><th>Anotaciones</th><th></th>
+              </tr>
+            </thead>
+            <tbody id="brutosTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    
+
+    
+    <section class="view hidden" id="view-meds">
+      <section class="card">
+        <div class="card-h">Medicamentos / Procedimientos</div>
+        <div class="filters">
+          <button class="btn secondary" id="quickRowMeds">+ Fila rápida</button>
+          <button class="btn" id="addMedBtn">+ Registrar</button>
+          <input id="searchMeds" placeholder="Buscar por finca, nombre o procedimiento..." />
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Finca</th><th>Nombre</th><th>Sexo</th><th>Fecha</th><th>Medicamento/Procedimiento</th><th>Responsable</th><th>Plan</th><th>Costo (COP)</th><th>Notas</th><th></th>
+              </tr>
+            </thead>
+            <tbody id="medsTbody"></tbody>
+          </table>
+        </div>
+        <div class="divider"></div>
+        <div class="small">💡 Si en “Plan” escribes fechas (ej: refuerzo 10/03/2026) el sistema crea refuerzos automáticamente.</div>
       </section>
     </section>
 
-    <section class="view hidden" id="view-milk">
+<section class="view hidden" id="view-milk">
       <section class="card">
         <div class="card-h">Registro de ordeño (por vaca)</div>
         <div class="filters">
