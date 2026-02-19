@@ -150,7 +150,10 @@ if "Bovinos_Activos" in wb.sheetnames:
             return by_name[low]
         return ""
 
-    # --- Milk from Produccion_Diaria (only rows with Fecha)
+ # --- Milk from Ordeño
+if "Ordeño" in wb.sheetnames:
+    ws = wb["Ordeño"]
+
    if "Ordeño" in wb.sheetnames:
     ws = wb["Ordeño"]
      
