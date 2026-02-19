@@ -73,37 +73,60 @@ def main():
     data["users"].append({"id":"user_import","name":"Importado"})
 
     # --- Animals from Bovinos_Activos
-    if "Bovinos_Activos" in wb.sheetnames:
-        ws = wb["Bovinos_Activos"]
-        header = [ws.cell(1,c).value for c in range(1, 30)]
-        mp = find_header_map(header)
-        idx = 0
-        for r in range(2, ws.max_row+1):
-            row = [ws.cell(r,c).value for c in range(1, 30)]
-            arete = safe_get(row, mp, "arete")
-            name = safe_get(row, mp, "nombre/arete", "nombre")
-            finca = safe_get(row, mp, "finca")
-            sexo = safe_get(row, mp, "sexo")
-            raza = safe_get(row, mp, "raza")
-            if arete is None and name is None:
+   # ===============================
+# IMPORTAR TODOS LOS CAMPOS REALES DEL EXCEL
+# ===============================
+
+def slug_key(s: str) -> str:
+    s = norm(s).lower()
+    s = re.sub(r"\s+", "_", s)
+    s = re.sub(r"[^a-z0-9_áéíóúñ]", "", s)
+    return s.strip("_")
+
+if "Bovinos_Activos" in wb.sheetnames:
+    ws = wb["Bovinos_Activos"]
+    header = [ws.cell(1, c).value for c in range(1, ws.max_column + 1)]
+    mp = find_header_map(header)
+    idx = 0
+
+    for r in range(2, ws.max_row + 1):
+        row = [ws.cell(r, c).value for c in range(1, ws.max_column + 1)]
+
+        arete = safe_get(row, mp, "arete")
+        nombre = safe_get(row, mp, "nombre/arete", "nombre")
+        finca = safe_get(row, mp, "finca")
+        sexo = safe_get(row, mp, "sexo")
+        raza = safe_get(row, mp, "raza")
+
+        if arete is None and nombre is None:
+            continue
+
+        arete_s = norm(arete)
+
+        # GUARDAR TODAS LAS DEMÁS COLUMNAS
+        extras = {}
+        for i, h in enumerate(header):
+            key = slug_key(h)
+            if not key:
                 continue
-            arete_s = norm(arete)
-            # If arete empty but name is numeric
-            if not arete_s and re.fullmatch(r"\d+", norm(name)):
-                arete_s = norm(name)
-                name = ""
-            if not arete_s and not norm(name):
+            val = row[i] if i < len(row) else None
+            if val is None or str(val).strip() == "":
                 continue
-            idx += 1
-            data["animals"].append({
-                "id": uid("ani", idx),
-                "arete": arete_s,
-                "name": norm(name),
-                "finca": norm(finca),
-                "sexo": norm(sexo) or "Hembra",
-                "raza": norm(raza),
-                "createdBy": "user_import",
-                "createdAt": 0
+            extras[key] = val
+
+        idx += 1
+        data["animals"].append({
+            "id": uid("ani", idx),
+            "arete": arete_s,
+            "name": norm(nombre),
+            "finca": norm(finca),
+            "sexo": norm(sexo) or "Hembra",
+            "raza": norm(raza),
+            "extras": extras,
+            "createdBy": "user_import",
+            "createdAt": 0
+        })
+
             })
 
     # Helper: map arete->animalId and name->animalId
