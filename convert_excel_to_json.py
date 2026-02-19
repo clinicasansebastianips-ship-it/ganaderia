@@ -64,9 +64,12 @@ def main():
 
     wb = openpyxl.load_workbook(xlsx, data_only=True)
 
-    data = {k: [] for k in [
-        "users","animals","milk","healthEvents","boosters","repro",
-        "salesCheese","buyMilk","transMilk","fixedCosts"
+   data = {k: [] for k in [
+  "users","animals","brutos","meds",
+  "milk","healthEvents","boosters","repro",
+  "salesCheese","buyMilk","transMilk","fixedCosts"
+]}
+
     ]}
 
     # Default user
