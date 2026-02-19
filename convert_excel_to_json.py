@@ -151,8 +151,8 @@ if "Bovinos_Activos" in wb.sheetnames:
         return ""
 
     # --- Milk from Produccion_Diaria (only rows with Fecha)
-    if "Produccion_Diaria" in wb.sheetnames:
-        ws = wb["Produccion_Diaria"]
+   if "Ordeño" in wb.sheetnames:
+    ws = wb["Ordeño"]
         header = [ws.cell(1,c).value for c in range(1, 30)]
         mp = find_header_map(header)
         idx = 0
