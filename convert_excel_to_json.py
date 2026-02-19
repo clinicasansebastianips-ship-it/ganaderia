@@ -153,6 +153,7 @@ if "Bovinos_Activos" in wb.sheetnames:
     # --- Milk from Produccion_Diaria (only rows with Fecha)
    if "Ordeño" in wb.sheetnames:
     ws = wb["Ordeño"]
+     
         header = [ws.cell(1,c).value for c in range(1, 30)]
         mp = find_header_map(header)
         idx = 0
@@ -241,8 +242,9 @@ if "Bovinos_Activos" in wb.sheetnames:
                 })
 
     # --- Repro from Control_Reproductivo (if filled)
-    if "Control_Reproductivo" in wb.sheetnames:
-        ws = wb["Control_Reproductivo"]
+   if "Reproduccion" in wb.sheetnames:
+    ws = wb["Reproduccion"]
+
         header = [ws.cell(1,c).value for c in range(1, 40)]
         mp = find_header_map(header)
         rep_i = 0
