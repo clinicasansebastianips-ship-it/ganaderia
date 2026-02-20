@@ -64,10 +64,47 @@ def main():
 
     wb = openpyxl.load_workbook(xlsx, data_only=True)
 
-   data = {k: [] for k in [
-  "users","animals","brutos","meds",
-  "milk","healthEvents","boosters","repro",
-  "salesCheese","buyMilk","transMilk","fixedCosts"
+  # --- Brutos from Bovinos_Bruto
+if "Bovinos_Bruto" in wb.sheetnames:
+    ws = wb["Bovinos_Bruto"]
+    header = [ws.cell(1, c).value for c in range(1, ws.max_column + 1)]
+    mp = find_header_map(header)
+    i = 0
+
+    for r in range(2, ws.max_row + 1):
+        row = [ws.cell(r, c).value for c in range(1, ws.max_column + 1)]
+        if all(v is None or str(v).strip()=="" for v in row):
+            continue
+
+        i += 1
+
+        nombreArete = safe_get(row, mp, "nombre/arete", "nombre", "arete")
+        estado = safe_get(row, mp, "estado", "estado_nota", "nota", "observacion")
+        edad = safe_get(row, mp, "edad", "edad_meses", "meses")
+        peso = safe_get(row, mp, "peso", "peso_kg", "kg")
+
+        # Guarda TODO lo demás en extras para no perder columnas
+        extras = {}
+        for j, h in enumerate(header):
+            k = norm(h).strip()
+            if not k:
+                continue
+            v = row[j] if j < len(row) else None
+            if v is None or str(v).strip()=="":
+                continue
+            extras[k] = v
+
+        data["brutos"].append({
+            "id": uid("bru", i),
+            "nombreArete": norm(nombreArete),
+            "estadoNota": norm(estado),
+            "edad": norm(edad),
+            "peso": norm(peso),
+            "extras": extras,
+            "createdBy": "user_import",
+            "createdAt": 0
+        })
+
 ]}
 
     ]}
