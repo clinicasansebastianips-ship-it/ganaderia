@@ -227,37 +227,55 @@ if "Ordeño" in wb.sheetnames:
             })
 
     # --- Medicamentos -> healthEvents + boosters (extract refuerzo dates from Plan text)
-    if "Medicamentos" in wb.sheetnames:
-        ws = wb["Medicamentos"]
-        header = [ws.cell(1,c).value for c in range(1, 40)]
-        mp = find_header_map(header)
-        ev_i = 0
-        boo_i = 0
-        for r in range(2, ws.max_row+1):
-            row = [ws.cell(r,c).value for c in range(1, 40)]
-            finca = safe_get(row, mp, "finca")
-            nombre = safe_get(row, mp, "nombre")
-            fecha = safe_get(row, mp, "fecha")
-            proc = safe_get(row, mp, "medicamento/procedimiento", "medicamento", "procedimiento")
-            plan = safe_get(row, mp, "plan")
-            if proc is None and plan is None and fecha is None:
-                continue
-            date_iso = parse_date(fecha) or ""
-            animal_id = resolve_animal_id(nombre)
-            if not animal_id:
-                # try if nombre cell is arete number
-                animal_id = resolve_animal_id(str(nombre))
-            if not animal_id:
-                continue
-            ev_i += 1
-            event_id = uid("hev", ev_i)
-            data["healthEvents"].append({
-                "id": event_id,
-                "animalId": animal_id,
-                "procedure": norm(proc),
-                "date": date_iso,
-                "createdBy":"user_import",
-                "createdAt":0
+   # --- Meds from Medicamentos
+if "Medicamentos" in wb.sheetnames:
+    ws = wb["Medicamentos"]
+    header = [ws.cell(1, c).value for c in range(1, ws.max_column + 1)]
+    mp = find_header_map(header)
+    ev_i = 0
+
+    for r in range(2, ws.max_row + 1):
+        row = [ws.cell(r, c).value for c in range(1, ws.max_column + 1)]
+
+        arete = safe_get(row, mp, "arete", "id", "codigo")
+        nombre = safe_get(row, mp, "nombre", "nombre/arete")
+
+        fecha = safe_get(row, mp, "fecha", "fecha_aplicacion", "dia")
+        proc = safe_get(row, mp, "procedimiento", "medicamento", "tratamiento")
+        responsable = safe_get(row, mp, "responsable", "veterinario", "aplico")
+        plan = safe_get(row, mp, "plan", "dosis", "detalle")
+        costo = safe_get(row, mp, "costo", "valor", "precio")
+        notas = safe_get(row, mp, "notas", "observacion", "obs")
+        finca = safe_get(row, mp, "finca")
+
+        # Si no hay nada útil, saltar
+        if (arete is None and nombre is None) or (proc is None and plan is None and responsable is None):
+            continue
+
+        # Resolver animalId (primero arete, luego nombre)
+        animal_id = resolve_animal_id(arete) or resolve_animal_id(nombre)
+        if not animal_id:
+            # si no podemos vincularlo a un animal, igual lo guardamos como meds suelto
+            animal_id = ""
+
+        date_iso = parse_date(fecha)
+
+        ev_i += 1
+        data["meds"].append({
+            "id": uid("med", ev_i),
+            "animalId": animal_id,
+            "nombre": norm(nombre),
+            "fecha": date_iso,
+            "procedimiento": norm(proc),
+            "responsable": norm(responsable),
+            "plan": norm(plan),
+            "costo": norm(costo),
+            "notas": norm(notas),
+            "finca": norm(finca),
+            "createdBy": "user_import",
+            "createdAt": 0
+        })
+
             })
             text = f"{norm(plan)} {norm(proc)}"
             # Find all date mentions in text
