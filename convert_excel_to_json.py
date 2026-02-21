@@ -476,12 +476,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-        data["fixedCosts"].append({"id":uid("fx", idx),"concept":norm(rec["concept"]),
-                                  "value":value,"createdBy":"user_import","createdAt":0})
-
-    out = {"exportedAt": datetime.datetime.utcnow().isoformat()+"Z", "data": data}
-    Path("ganaderia_import.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("OK -> ganaderia_import.json creado")
-
-if __name__ == "__main__":
-    main()
